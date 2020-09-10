@@ -1,0 +1,37 @@
+.goods_item{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    .goods_img_wrap{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image{
+            width: 80%;
+        }
+    }
+    .goods_info_wrap{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .goods_name{
+            //效果：多行文本溢出部分显示省略号
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            //弹性伸缩盒子模式显示
+            display: -webkit-box;
+            //限制一个块元素显示文本行数
+            -webkit-line-clamp: 2;
+            //设置或检索一个伸缩盒对象子元素的排列方式
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            
+        }
+        .goods_price{
+            color: var(--themeColor);
+            font-size: 32rpx;
+          }
+    }
+}
